@@ -21,6 +21,37 @@ To effectively remediate these issues, the following steps should be taken:
 
 By addressing these points, the system will be better secured and the risk of unauthorized access or data breaches significantly reduced.
 
-## Additional Information
+## Guides
 
-For further details on how access was gained and to explore various methods for locking down guest access to SMB shares, please refer to the **Guides** folder. This folder contains comprehensive documentation on the access exploitation process and step-by-step instructions on securing SMB shares, ensuring that guest access is properly restricted and that sensitive data is protected.
+<details>
+  <summary>Steps to Recreate Compromise</summary>
+  
+# Recreating the Compromise
+
+## Step 1: Reconnaissance
+
+Using the following commands, I was able to get information on the open ports and then moved to see if there were any public-facing SMB shares.
+
+nmap -sV -sS -A 10.129.156.234
+Please see below for a screenshot of the output of the commands.
+![nmap output](/screenshots/nmap.png)
+
+Next, we moved to see if there were any shares available.
+
+smbclient -N -L \\10.129.156.234
+
+Please see below for a screenshot of the output of the commands.
+![smb shares](/screenshots/smb_enumeration)
+
+</details>
+
+<details>
+  <summary>SMB Guest Access Lockdown</summary>
+  
+  1. **Step 1:** Disable guest access to the SMB share by adjusting the appropriate access control settings on the server.
+  2. **Step 2:** Review and confirm that only authorized users and groups have access to the share.
+  3. **Step 3:** Ensure the system is configured to prevent guest access in the future by disabling guest accounts or limiting permissions.
+  4. **Step 4:** Document the updated access control configuration and test to confirm restrictions are enforced.
+
+</details>
+

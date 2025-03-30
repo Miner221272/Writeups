@@ -140,6 +140,7 @@ this will give the following output:
 
 ![privilege Esc](https://github.com/Miner221272/Writeups/blob/main/Medium/Querier/screenshots/admin_cred_grab.png)
 
+With these credentials you can now gain full acccess to the system using "impacket-psexec Administrator:MyUnclesAreMarioAndLuigi!!1!@"
 
 </details>
 

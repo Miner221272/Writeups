@@ -54,6 +54,9 @@ This will succeed and by using the "ls" command we can see that
 "Currency Volume Report.xlsm" is saved here
 ![smb vuln file](https://github.com/Miner221272/Writeups/blob/main/Medium/Querier/screenshots/smb_available_file.png)
 
+use the following command to save this file locally.
+get "Currency Volume Report.xlsm"
+
 The "m" in ".xlsm" means there are macros enabled.
 We will next unzip the file the "unzip" command.
 Once it is unzipped use the following command to see the first set of compromised credentials.

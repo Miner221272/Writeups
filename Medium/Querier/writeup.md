@@ -39,7 +39,7 @@ Please see below for a screenshot of the output of the commands.
 
 Next, we moved to see if there were any shares available.
 
-smbclient -N -L \\10.129.156.234
+smbclient -N -L \\\\\\\\10.129.156.234
 
 Please see below for a screenshot of the output of the commands.
 ![smb shares](/screenshots/smb_enumeration)

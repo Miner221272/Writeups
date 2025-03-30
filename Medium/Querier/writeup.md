@@ -55,6 +55,7 @@ This will succeed and by using the "ls" command we can see that
 ![smb vuln file](https://github.com/Miner221272/Writeups/blob/main/Medium/Querier/screenshots/smb_available_file.png)
 
 use the following command to save this file locally.
+
 get "Currency Volume Report.xlsm"
 
 The "m" in ".xlsm" means there are macros enabled.

@@ -1,0 +1,3 @@
+Querier is a Medium level retired box on hackthebox.com
+
+The primary security vulnerabilities identified stem from two key issues: first, the improper configuration of access controls, allowing guest users to log on to the SMB share "REPORTS," and second, the insufficient cleanup of sensitive data by local administrators and users. This lack of oversight has led to the retention of multiple files containing highly sensitive information, including user login credentials embedded in Excel macros and configuration files used for unattended installations. These vulnerabilities pose a significant risk, as they could potentially expose critical authentication data to unauthorized individuals, increasing the likelihood of unauthorized access and exploitation of the network.

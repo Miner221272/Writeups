@@ -44,6 +44,24 @@ smbclient -N -L \\\\\\\\10.129.156.234
 Please see below for a screenshot of the output of the commands.
 ![smb shares](https://github.com/Miner221272/Writeups/blob/main/Medium/Querier/screenshots/smb_enumeration.png)
 
+## Step 2: Initial Access
+
+Through the above reconnaissance we were able to identify the "Reports" share
+We can test if this share allows guest logon through the following
+smbclient -N \\\\\\\\10.129.156.234\\\\Reports
+This will succeed and by using the "ls" command we can see that 
+
+"Currency Volume Report.xlsm" is saved here
+![smb vuln file](https://github.com/Miner221272/Writeups/blob/main/Medium/Querier/screenshots/smb_available_file.png)
+
+The "m" in ".xlsm" means there are macros enabled.
+We will next unzip the file the "unzip" command.
+Once it is unzipped use the following command to see the first set of compromised credentials.
+
+head xl/vbaProject.bin | strings
+![first creds gathered](https://github.com/Miner221272/Writeups/blob/main/Medium/Querier/screenshots/Initial_creds_comp.png)
+
+
 </details>
 
 <details>

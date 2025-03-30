@@ -59,8 +59,8 @@ use the following command to save this file locally.
 get "Currency Volume Report.xlsm"
 
 The "m" in ".xlsm" means there are macros enabled.
-We will next unzip the file the "unzip" command.
-Once it is unzipped use the following command to see the first set of compromised credentials.
+We will next unzip the file with the "unzip" command.
+Once it is unzipped use the following command to gain access to our first set of compromised credentials.
 
 head xl/vbaProject.bin | strings
 ![first creds gathered](https://github.com/Miner221272/Writeups/blob/main/Medium/Querier/screenshots/Initial_creds_comp.png)

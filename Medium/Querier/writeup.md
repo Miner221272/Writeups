@@ -42,7 +42,7 @@ Next, we moved to see if there were any shares available.
 smbclient -N -L \\\\\\\\10.129.156.234
 
 Please see below for a screenshot of the output of the commands.
-![smb shares](/screenshots/smb_enumeration)
+![smb shares](https://github.com/Miner221272/Writeups/blob/main/Medium/Querier/screenshots/smb_enumeration.png)
 
 </details>
 

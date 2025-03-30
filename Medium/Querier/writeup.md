@@ -65,6 +65,16 @@ Once it is unzipped use the following command to gain access to our first set of
 head xl/vbaProject.bin | strings
 ![first creds gathered](https://github.com/Miner221272/Writeups/blob/main/Medium/Querier/screenshots/Initial_creds_comp.png)
 
+## Step 3: Privilege Escalation  
+
+Before you move forward with this section we will need a few tools
+
+-johntheripper
+-impacket-mssqlclient
+-impacket-psexec
+-netcat
+-python3 http.server
+
 
 </details>
 

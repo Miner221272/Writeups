@@ -35,7 +35,7 @@ Using the following commands, I was able to get information on the open ports an
 nmap -sV -sS -A 10.129.156.234
 
 Please see below for a screenshot of the output of the commands.
-![nmap output](/screenshots/nmap.png)
+![nmap output](https://github.com/Miner221272/Writeups/blob/main/Medium/Querier/screenshots/nmap.png)
 
 Next, we moved to see if there were any shares available.
 

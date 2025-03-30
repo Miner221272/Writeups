@@ -33,6 +33,7 @@ By addressing these points, the system will be better secured and the risk of un
 Using the following commands, I was able to get information on the open ports and then moved to see if there were any public-facing SMB shares.
 
 nmap -sV -sS -A 10.129.156.234
+
 Please see below for a screenshot of the output of the commands.
 ![nmap output](/screenshots/nmap.png)
 

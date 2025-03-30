@@ -69,11 +69,15 @@ head xl/vbaProject.bin | strings
 
 Before you move forward with this section we will need a few tools
 
--johntheripper
--impacket-mssqlclient
--impacket-psexec
--netcat
--python3 http.server
+- johntheripper
+
+- impacket-mssqlclient
+
+- impacket-psexec
+
+- netcat
+
+- python3 http.server
 
 
 </details>

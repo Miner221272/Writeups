@@ -1,8 +1,12 @@
 # Security Remediation Plan
 
-## Identified Security Vulnerabilities
+## Identified Issues
 
+1. **Default Login Credentials:**
+   One of the key issues identified is the presence of default login credentials that have not been updated. Leaving default login information unchanged significantly increases the risk of unauthorized access, as attackers often exploit these weak credentials.
 
+2. **Lack of Enforcement for Sudo Access:**
+   Another issue discovered is the lack of proper controls around the enforcement of sudo access. Users who require elevated privileges are not being properly managed, which can lead to excessive permissions being granted. This lack of restriction increases the risk of misuse, either accidentally or maliciously.
 
 ## Guides
 

